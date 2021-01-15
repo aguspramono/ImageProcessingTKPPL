@@ -1,6 +1,6 @@
 ﻿namespace ImageProcessing
 {
-    partial class Form1
+    partial class Menu
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             this.btnNoise.TabIndex = 0;
             this.btnNoise.Text = "Image Noise";
             this.btnNoise.UseVisualStyleBackColor = true;
+            this.btnNoise.Click += new System.EventHandler(this.btnNoise_Click);
             // 
             // btnSmoothing
             // 
@@ -63,7 +64,7 @@
             this.btnEnhancement.Text = "Image Enhancement";
             this.btnEnhancement.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -75,7 +76,7 @@
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ImageProcessing";
             this.ResumeLayout(false);

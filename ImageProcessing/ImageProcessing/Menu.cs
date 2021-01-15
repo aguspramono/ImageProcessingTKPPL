@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace ImageProcessing
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public Menu()
         {
             InitializeComponent();
+        }
+
+        private void btnNoise_Click(object sender, EventArgs e)
+        {
+            Noise noiseForm = new Noise();
+
+            noiseForm.ShowDialog();
         }
     }
 }
