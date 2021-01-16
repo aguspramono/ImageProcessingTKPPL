@@ -12,8 +12,8 @@ namespace ImageProcessing
 {
     public partial class Noise : Form
     {
-
         OpenFileDialog openImage = new OpenFileDialog();
+        SaveFileDialog saveImage = new SaveFileDialog();
         Bitmap Real, Gaussian, Speckle, SP;
         int R, G, B;
         Color PixelColor;
@@ -156,6 +156,81 @@ namespace ImageProcessing
             }
             else
                 MessageBox.Show("Masukkan citra yang akan diolah");
+        }
+
+        private void btnGaussianSave_Click(object sender, EventArgs e)
+        {
+            if (Gaussian != null)
+            {
+                String pathFile = null;
+                saveImage.Filter = "Bitmap (*.bmp) | *.bmp|Portable Network Graphics (*.png) | *.png|Joint Photographic Expert Group (*.jpeg) | *.jpeg";
+                DialogResult result = saveImage.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    pathFile = saveImage.FileName;
+                    if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "bmp")
+                        Gaussian.Save(pathFile, System.Drawing.Imaging.ImageFormat.Bmp);
+                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "png")
+                        Gaussian.Save(pathFile, System.Drawing.Imaging.ImageFormat.Png);
+                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "jpeg")
+                        Gaussian.Save(pathFile, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                    MessageBox.Show("Gambar berhasil disimpan");
+                }
+            }
+            else
+                MessageBox.Show("Tidak ada gambar yang bisa disimpan");
+        }
+
+        private void btnSpeckleSave_Click(object sender, EventArgs e)
+        {
+            if (Speckle != null)
+            {
+                String pathFile = null;
+                saveImage.Filter = "Bitmap (*.bmp) | *.bmp|Portable Network Graphics (*.png) | *.png|Joint Photographic Expert Group (*.jpeg) | *.jpeg";
+                DialogResult result = saveImage.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    pathFile = saveImage.FileName;
+                    if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "bmp")
+                        Speckle.Save(pathFile, System.Drawing.Imaging.ImageFormat.Bmp);
+                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "png")
+                        Speckle.Save(pathFile, System.Drawing.Imaging.ImageFormat.Png);
+                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "jpeg")
+                        Speckle.Save(pathFile, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                    MessageBox.Show("Gambar berhasil disimpan");
+                }
+            }
+            else
+                MessageBox.Show("Tidak ada gambar yang bisa disimpan");
+        }
+
+        private void btnSPSave_Click(object sender, EventArgs e)
+        {
+            if (SP != null)
+            {
+                String pathFile = null;
+                saveImage.Filter = "Bitmap (*.bmp) | *.bmp|Portable Network Graphics (*.png) | *.png|Joint Photographic Expert Group (*.jpeg) | *.jpeg";
+                DialogResult result = saveImage.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    pathFile = saveImage.FileName;
+                    if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "bmp")
+                        SP.Save(pathFile, System.Drawing.Imaging.ImageFormat.Bmp);
+                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "png")
+                        SP.Save(pathFile, System.Drawing.Imaging.ImageFormat.Png);
+                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "jpeg")
+                        SP.Save(pathFile, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                    MessageBox.Show("Gambar berhasil disimpan");
+                }
+            }
+            else
+                MessageBox.Show("Tidak ada gambar yang bisa disimpan");
         }
     }
 }
