@@ -23,5 +23,12 @@ namespace ImageProcessing
 
             noiseForm.ShowDialog();
         }
+
+        private void btnSmoothing_Click(object sender, EventArgs e)
+        {
+            Smooth smoothForm = new Smooth();
+
+            smoothForm.ShowDialog();
+        }
     }
 }
