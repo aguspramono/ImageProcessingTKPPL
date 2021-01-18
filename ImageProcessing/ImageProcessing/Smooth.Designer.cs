@@ -91,6 +91,7 @@
             this.btnMedian.TabIndex = 14;
             this.btnMedian.Text = "Median Filter";
             this.btnMedian.UseVisualStyleBackColor = true;
+            this.btnMedian.Click += new System.EventHandler(this.btnMedian_Click);
             // 
             // btnMean
             // 
