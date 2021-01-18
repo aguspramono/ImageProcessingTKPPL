@@ -53,6 +53,7 @@
             this.btnSmoothing.TabIndex = 1;
             this.btnSmoothing.Text = "Image Smoothing";
             this.btnSmoothing.UseVisualStyleBackColor = true;
+            this.btnSmoothing.Click += new System.EventHandler(this.btnSmoothing_Click);
             // 
             // btnEnhancement
             // 
