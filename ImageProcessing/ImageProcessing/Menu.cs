@@ -30,5 +30,12 @@ namespace ImageProcessing
 
             smoothForm.ShowDialog();
         }
+
+        private void btnEnhancement_Click(object sender, EventArgs e)
+        {
+            Enhancement enhancementForm = new Enhancement();
+
+            enhancementForm.ShowDialog();
+        }
     }
 }

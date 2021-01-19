@@ -64,6 +64,7 @@
             this.btnEnhancement.TabIndex = 2;
             this.btnEnhancement.Text = "Image Enhancement";
             this.btnEnhancement.UseVisualStyleBackColor = true;
+            this.btnEnhancement.Click += new System.EventHandler(this.btnEnhancement_Click);
             // 
             // Menu
             // 

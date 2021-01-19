@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enhancement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enhancement.Designer.cs">
+      <DependentUpon>Enhancement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     <Compile Include="Smooth.Designer.cs">
       <DependentUpon>Smooth.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Enhancement.resx">
+      <DependentUpon>Enhancement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
