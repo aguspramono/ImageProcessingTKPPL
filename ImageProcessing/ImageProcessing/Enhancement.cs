@@ -13,7 +13,8 @@ namespace ImageProcessing
     public partial class Enhancement : Form
     {
         OpenFileDialog openImage = new OpenFileDialog();
-        Bitmap Real;
+        SaveFileDialog saveImage = new SaveFileDialog();
+        Bitmap Real, pctHE, pctCS;
         int R, G, B;
         Color PixelColor;
 
@@ -97,6 +98,56 @@ namespace ImageProcessing
             InitializeComponent();
         }
 
+        private void btnCSSave_Click(object sender, EventArgs e)
+        {
+            if (pctCS != null)
+            {
+                String pathFile = null;
+                saveImage.Filter = "Bitmap (*.bmp) | *.bmp|Portable Network Graphics (*.png) | *.png|Joint Photographic Expert Group (*.jpeg) | *.jpeg";
+                DialogResult result = saveImage.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    pathFile = saveImage.FileName;
+                    if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "bmp")
+                        pctCS.Save(pathFile, System.Drawing.Imaging.ImageFormat.Bmp);
+                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "png")
+                        pctCS.Save(pathFile, System.Drawing.Imaging.ImageFormat.Png);
+                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "jpeg")
+                        pctCS.Save(pathFile, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                    MessageBox.Show("Gambar berhasil disimpan");
+                }
+            }
+            else
+                MessageBox.Show("Tidak ada gambar yang bisa disimpan");
+        }
+
+        private void btnHESave_Click(object sender, EventArgs e)
+        {
+            if (pctHE != null)
+            {
+                String pathFile = null;
+                saveImage.Filter = "Bitmap (*.bmp) | *.bmp|Portable Network Graphics (*.png) | *.png|Joint Photographic Expert Group (*.jpeg) | *.jpeg";
+                DialogResult result = saveImage.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    pathFile = saveImage.FileName;
+                    if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "bmp")
+                        pctHE.Save(pathFile, System.Drawing.Imaging.ImageFormat.Bmp);
+                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "png")
+                        pctHE.Save(pathFile, System.Drawing.Imaging.ImageFormat.Png);
+                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "jpeg")
+                        pctHE.Save(pathFile, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                    MessageBox.Show("Gambar berhasil disimpan");
+                }
+            }
+            else
+                MessageBox.Show("Tidak ada gambar yang bisa disimpan");
+        }
+
         private void btnOpenImage_Click(object sender, EventArgs e)
         {
             String pathFile = null;
@@ -114,7 +165,10 @@ namespace ImageProcessing
         private void btnHE_Click(object sender, EventArgs e)
         {
             if(Real != null)
-                pcbHEImage.Image = HE(Real);
+            {
+                pctHE = HE(Real);
+                pcbHEImage.Image = pctHE;
+            }
             else
                 MessageBox.Show("Masukkan citra yang akan diolah");
         }

@@ -91,6 +91,7 @@
             this.btnCSSave.TabIndex = 23;
             this.btnCSSave.Text = "Save";
             this.btnCSSave.UseVisualStyleBackColor = true;
+            this.btnCSSave.Click += new System.EventHandler(this.btnCSSave_Click);
             // 
             // btnHESave
             // 
@@ -101,6 +102,7 @@
             this.btnHESave.TabIndex = 24;
             this.btnHESave.Text = "Save";
             this.btnHESave.UseVisualStyleBackColor = true;
+            this.btnHESave.Click += new System.EventHandler(this.btnHESave_Click);
             // 
             // btnOpenImage
             // 
