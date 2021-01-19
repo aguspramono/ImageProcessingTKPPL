@@ -141,7 +141,7 @@
             this.MaximizeBox = false;
             this.Name = "Enhancement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Enhancement";
+            this.Text = "Image Enhancement";
             ((System.ComponentModel.ISupportInitialize)(this.pcbHEImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCSImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbRealImage)).EndInit();

@@ -113,7 +113,10 @@ namespace ImageProcessing
 
         private void btnHE_Click(object sender, EventArgs e)
         {
-            pcbHEImage.Image = HE(Real);
+            if(Real != null)
+                pcbHEImage.Image = HE(Real);
+            else
+                MessageBox.Show("Masukkan citra yang akan diolah");
         }
     }
 }
