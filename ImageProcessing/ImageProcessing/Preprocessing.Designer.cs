@@ -33,14 +33,14 @@
             this.pcbRealImage = new System.Windows.Forms.PictureBox();
             this.btnModifiedSave = new System.Windows.Forms.Button();
             this.grbControl = new System.Windows.Forms.GroupBox();
-            this.btnGrayscale = new System.Windows.Forms.Button();
-            this.btnHorizontalMirror = new System.Windows.Forms.Button();
-            this.btnVerticalMirror = new System.Windows.Forms.Button();
-            this.btnRotateRight = new System.Windows.Forms.Button();
             this.btnRotateLeft = new System.Windows.Forms.Button();
-            this.btnLighten = new System.Windows.Forms.Button();
-            this.btnDarken = new System.Windows.Forms.Button();
+            this.btnRotateRight = new System.Windows.Forms.Button();
+            this.btnVerticalMirror = new System.Windows.Forms.Button();
+            this.btnHorizontalMirror = new System.Windows.Forms.Button();
             this.btnOriginal = new System.Windows.Forms.Button();
+            this.btnGrayscale = new System.Windows.Forms.Button();
+            this.btnDarken = new System.Windows.Forms.Button();
+            this.btnLighten = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcbModifiedImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbRealImage)).BeginInit();
             this.grbControl.SuspendLayout();
@@ -65,6 +65,7 @@
             this.btnOpenImage.TabIndex = 0;
             this.btnOpenImage.Text = "Browse...";
             this.btnOpenImage.UseVisualStyleBackColor = true;
+            this.btnOpenImage.Click += new System.EventHandler(this.btnOpenImage_Click);
             // 
             // pcbRealImage
             // 
@@ -103,35 +104,15 @@
             this.grbControl.TabStop = false;
             this.grbControl.Text = "Tools Box";
             // 
-            // btnGrayscale
+            // btnRotateLeft
             // 
-            this.btnGrayscale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGrayscale.Location = new System.Drawing.Point(304, 63);
-            this.btnGrayscale.Name = "btnGrayscale";
-            this.btnGrayscale.Size = new System.Drawing.Size(143, 35);
-            this.btnGrayscale.TabIndex = 8;
-            this.btnGrayscale.Text = "Convert to Grayscale";
-            this.btnGrayscale.UseVisualStyleBackColor = true;
-            // 
-            // btnHorizontalMirror
-            // 
-            this.btnHorizontalMirror.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHorizontalMirror.Location = new System.Drawing.Point(304, 22);
-            this.btnHorizontalMirror.Name = "btnHorizontalMirror";
-            this.btnHorizontalMirror.Size = new System.Drawing.Size(143, 35);
-            this.btnHorizontalMirror.TabIndex = 4;
-            this.btnHorizontalMirror.Text = "Horizontal Mirror";
-            this.btnHorizontalMirror.UseVisualStyleBackColor = true;
-            // 
-            // btnVerticalMirror
-            // 
-            this.btnVerticalMirror.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVerticalMirror.Location = new System.Drawing.Point(453, 22);
-            this.btnVerticalMirror.Name = "btnVerticalMirror";
-            this.btnVerticalMirror.Size = new System.Drawing.Size(143, 35);
-            this.btnVerticalMirror.TabIndex = 5;
-            this.btnVerticalMirror.Text = "Vertical Mirror";
-            this.btnVerticalMirror.UseVisualStyleBackColor = true;
+            this.btnRotateLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRotateLeft.Location = new System.Drawing.Point(155, 22);
+            this.btnRotateLeft.Name = "btnRotateLeft";
+            this.btnRotateLeft.Size = new System.Drawing.Size(143, 35);
+            this.btnRotateLeft.TabIndex = 3;
+            this.btnRotateLeft.Text = "Rotate -90°";
+            this.btnRotateLeft.UseVisualStyleBackColor = true;
             // 
             // btnRotateRight
             // 
@@ -143,35 +124,25 @@
             this.btnRotateRight.Text = "Rotate 90°";
             this.btnRotateRight.UseVisualStyleBackColor = true;
             // 
-            // btnRotateLeft
+            // btnVerticalMirror
             // 
-            this.btnRotateLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRotateLeft.Location = new System.Drawing.Point(155, 22);
-            this.btnRotateLeft.Name = "btnRotateLeft";
-            this.btnRotateLeft.Size = new System.Drawing.Size(143, 35);
-            this.btnRotateLeft.TabIndex = 3;
-            this.btnRotateLeft.Text = "Rotate -90°";
-            this.btnRotateLeft.UseVisualStyleBackColor = true;
+            this.btnVerticalMirror.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVerticalMirror.Location = new System.Drawing.Point(453, 22);
+            this.btnVerticalMirror.Name = "btnVerticalMirror";
+            this.btnVerticalMirror.Size = new System.Drawing.Size(143, 35);
+            this.btnVerticalMirror.TabIndex = 5;
+            this.btnVerticalMirror.Text = "Vertical Mirror";
+            this.btnVerticalMirror.UseVisualStyleBackColor = true;
             // 
-            // btnLighten
+            // btnHorizontalMirror
             // 
-            this.btnLighten.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLighten.Location = new System.Drawing.Point(6, 63);
-            this.btnLighten.Name = "btnLighten";
-            this.btnLighten.Size = new System.Drawing.Size(143, 35);
-            this.btnLighten.TabIndex = 6;
-            this.btnLighten.Text = "Increase Brightness";
-            this.btnLighten.UseVisualStyleBackColor = true;
-            // 
-            // btnDarken
-            // 
-            this.btnDarken.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDarken.Location = new System.Drawing.Point(155, 63);
-            this.btnDarken.Name = "btnDarken";
-            this.btnDarken.Size = new System.Drawing.Size(143, 35);
-            this.btnDarken.TabIndex = 7;
-            this.btnDarken.Text = "Decrease Brightness";
-            this.btnDarken.UseVisualStyleBackColor = true;
+            this.btnHorizontalMirror.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHorizontalMirror.Location = new System.Drawing.Point(304, 22);
+            this.btnHorizontalMirror.Name = "btnHorizontalMirror";
+            this.btnHorizontalMirror.Size = new System.Drawing.Size(143, 35);
+            this.btnHorizontalMirror.TabIndex = 4;
+            this.btnHorizontalMirror.Text = "Horizontal Mirror";
+            this.btnHorizontalMirror.UseVisualStyleBackColor = true;
             // 
             // btnOriginal
             // 
@@ -182,6 +153,40 @@
             this.btnOriginal.TabIndex = 9;
             this.btnOriginal.Text = "Restore Original";
             this.btnOriginal.UseVisualStyleBackColor = true;
+            this.btnOriginal.Click += new System.EventHandler(this.btnOriginal_Click);
+            // 
+            // btnGrayscale
+            // 
+            this.btnGrayscale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGrayscale.Location = new System.Drawing.Point(304, 63);
+            this.btnGrayscale.Name = "btnGrayscale";
+            this.btnGrayscale.Size = new System.Drawing.Size(143, 35);
+            this.btnGrayscale.TabIndex = 8;
+            this.btnGrayscale.Text = "Convert to Grayscale";
+            this.btnGrayscale.UseVisualStyleBackColor = true;
+            this.btnGrayscale.Click += new System.EventHandler(this.btnGrayscale_Click);
+            // 
+            // btnDarken
+            // 
+            this.btnDarken.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDarken.Location = new System.Drawing.Point(155, 63);
+            this.btnDarken.Name = "btnDarken";
+            this.btnDarken.Size = new System.Drawing.Size(143, 35);
+            this.btnDarken.TabIndex = 7;
+            this.btnDarken.Text = "Decrease Brightness";
+            this.btnDarken.UseVisualStyleBackColor = true;
+            this.btnDarken.Click += new System.EventHandler(this.btnDarken_Click);
+            // 
+            // btnLighten
+            // 
+            this.btnLighten.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLighten.Location = new System.Drawing.Point(6, 63);
+            this.btnLighten.Name = "btnLighten";
+            this.btnLighten.Size = new System.Drawing.Size(143, 35);
+            this.btnLighten.TabIndex = 6;
+            this.btnLighten.Text = "Increase Brightness";
+            this.btnLighten.UseVisualStyleBackColor = true;
+            this.btnLighten.Click += new System.EventHandler(this.btnLighten_Click);
             // 
             // Preprocessing
             // 
