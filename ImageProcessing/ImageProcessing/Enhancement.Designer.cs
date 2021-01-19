@@ -80,6 +80,7 @@
             this.btnHE.TabIndex = 21;
             this.btnHE.Text = "HE";
             this.btnHE.UseVisualStyleBackColor = true;
+            this.btnHE.Click += new System.EventHandler(this.btnHE_Click);
             // 
             // btnCSSave
             // 
