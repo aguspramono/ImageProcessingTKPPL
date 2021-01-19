@@ -113,7 +113,6 @@
             this.btnMedianSave.TabIndex = 15;
             this.btnMedianSave.Text = "Save";
             this.btnMedianSave.UseVisualStyleBackColor = true;
-            this.btnMedianSave.Click += new System.EventHandler(this.btnMedianSave_Click);
             // 
             // btnMeanSave
             // 
@@ -124,7 +123,6 @@
             this.btnMeanSave.TabIndex = 16;
             this.btnMeanSave.Text = "Save";
             this.btnMeanSave.UseVisualStyleBackColor = true;
-            this.btnMeanSave.Click += new System.EventHandler(this.btnMeanSave_Click);
             // 
             // Smooth
             // 

@@ -13,7 +13,6 @@ namespace ImageProcessing
     public partial class Smooth : Form
     {
         OpenFileDialog openImage = new OpenFileDialog();
-        SaveFileDialog saveImage = new SaveFileDialog();
         Bitmap Real, Mean, Median;
 
         public Smooth()
@@ -33,56 +32,6 @@ namespace ImageProcessing
                 Real = new Bitmap(pathFile);
                 pcbRealImage.Image = Real;
             }
-        }
-
-        private void btnMeanSave_Click(object sender, EventArgs e)
-        {
-            if (Mean != null)
-            {
-                String pathFile = null;
-                saveImage.Filter = "Bitmap (*.bmp) | *.bmp|Portable Network Graphics (*.png) | *.png|Joint Photographic Expert Group (*.jpeg) | *.jpeg";
-                DialogResult result = saveImage.ShowDialog();
-
-                if (result == DialogResult.OK)
-                {
-                    pathFile = saveImage.FileName;
-                    if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "bmp")
-                        Mean.Save(pathFile, System.Drawing.Imaging.ImageFormat.Bmp);
-                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "png")
-                        Mean.Save(pathFile, System.Drawing.Imaging.ImageFormat.Png);
-                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "jpeg")
-                        Mean.Save(pathFile, System.Drawing.Imaging.ImageFormat.Jpeg);
-
-                    MessageBox.Show("Gambar berhasil disimpan");
-                }
-            }
-            else
-                MessageBox.Show("Tidak ada gambar yang bisa disimpan");
-        }
-
-        private void btnMedianSave_Click(object sender, EventArgs e)
-        {
-            if (Median != null)
-            {
-                String pathFile = null;
-                saveImage.Filter = "Bitmap (*.bmp) | *.bmp|Portable Network Graphics (*.png) | *.png|Joint Photographic Expert Group (*.jpeg) | *.jpeg";
-                DialogResult result = saveImage.ShowDialog();
-
-                if (result == DialogResult.OK)
-                {
-                    pathFile = saveImage.FileName;
-                    if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "bmp")
-                        Median.Save(pathFile, System.Drawing.Imaging.ImageFormat.Bmp);
-                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "png")
-                        Median.Save(pathFile, System.Drawing.Imaging.ImageFormat.Png);
-                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "jpeg")
-                        Median.Save(pathFile, System.Drawing.Imaging.ImageFormat.Jpeg);
-
-                    MessageBox.Show("Gambar berhasil disimpan");
-                }
-            }
-            else
-                MessageBox.Show("Tidak ada gambar yang bisa disimpan");
         }
 
         private void btnMedian_Click(object sender, EventArgs e)
