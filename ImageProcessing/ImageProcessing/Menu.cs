@@ -37,5 +37,12 @@ namespace ImageProcessing
 
             enhancementForm.ShowDialog();
         }
+
+        private void btnPreprocessing_Click(object sender, EventArgs e)
+        {
+            Preprocessing preprocessingForm = new Preprocessing();
+
+            preprocessingForm.ShowDialog();
+        }
     }
 }

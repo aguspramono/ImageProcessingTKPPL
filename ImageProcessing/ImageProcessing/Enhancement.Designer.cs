@@ -67,7 +67,7 @@
             this.btnCS.Location = new System.Drawing.Point(624, 218);
             this.btnCS.Name = "btnCS";
             this.btnCS.Size = new System.Drawing.Size(125, 35);
-            this.btnCS.TabIndex = 22;
+            this.btnCS.TabIndex = 2;
             this.btnCS.Text = "CS";
             this.btnCS.UseVisualStyleBackColor = true;
             // 
@@ -77,7 +77,7 @@
             this.btnHE.Location = new System.Drawing.Point(318, 218);
             this.btnHE.Name = "btnHE";
             this.btnHE.Size = new System.Drawing.Size(125, 35);
-            this.btnHE.TabIndex = 21;
+            this.btnHE.TabIndex = 1;
             this.btnHE.Text = "HE";
             this.btnHE.UseVisualStyleBackColor = true;
             this.btnHE.Click += new System.EventHandler(this.btnHE_Click);
@@ -88,7 +88,7 @@
             this.btnCSSave.Location = new System.Drawing.Point(755, 218);
             this.btnCSSave.Name = "btnCSSave";
             this.btnCSSave.Size = new System.Drawing.Size(67, 35);
-            this.btnCSSave.TabIndex = 23;
+            this.btnCSSave.TabIndex = 4;
             this.btnCSSave.Text = "Save";
             this.btnCSSave.UseVisualStyleBackColor = true;
             this.btnCSSave.Click += new System.EventHandler(this.btnCSSave_Click);
@@ -99,7 +99,7 @@
             this.btnHESave.Location = new System.Drawing.Point(449, 218);
             this.btnHESave.Name = "btnHESave";
             this.btnHESave.Size = new System.Drawing.Size(67, 35);
-            this.btnHESave.TabIndex = 24;
+            this.btnHESave.TabIndex = 3;
             this.btnHESave.Text = "Save";
             this.btnHESave.UseVisualStyleBackColor = true;
             this.btnHESave.Click += new System.EventHandler(this.btnHESave_Click);
@@ -110,7 +110,7 @@
             this.btnOpenImage.Location = new System.Drawing.Point(112, 218);
             this.btnOpenImage.Name = "btnOpenImage";
             this.btnOpenImage.Size = new System.Drawing.Size(101, 35);
-            this.btnOpenImage.TabIndex = 19;
+            this.btnOpenImage.TabIndex = 0;
             this.btnOpenImage.Text = "Browse...";
             this.btnOpenImage.UseVisualStyleBackColor = true;
             this.btnOpenImage.Click += new System.EventHandler(this.btnOpenImage_Click);

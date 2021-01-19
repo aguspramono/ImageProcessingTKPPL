@@ -146,7 +146,7 @@
             this.btnSpeckleSave.Location = new System.Drawing.Point(452, 483);
             this.btnSpeckleSave.Name = "btnSpeckleSave";
             this.btnSpeckleSave.Size = new System.Drawing.Size(67, 35);
-            this.btnSpeckleSave.TabIndex = 4;
+            this.btnSpeckleSave.TabIndex = 5;
             this.btnSpeckleSave.Text = "Save";
             this.btnSpeckleSave.UseVisualStyleBackColor = true;
             this.btnSpeckleSave.Click += new System.EventHandler(this.btnSpeckleSave_Click);
@@ -157,7 +157,7 @@
             this.btnSPSave.Location = new System.Drawing.Point(755, 483);
             this.btnSPSave.Name = "btnSPSave";
             this.btnSPSave.Size = new System.Drawing.Size(67, 35);
-            this.btnSPSave.TabIndex = 4;
+            this.btnSPSave.TabIndex = 6;
             this.btnSPSave.Text = "Save";
             this.btnSPSave.UseVisualStyleBackColor = true;
             this.btnSPSave.Click += new System.EventHandler(this.btnSPSave_Click);

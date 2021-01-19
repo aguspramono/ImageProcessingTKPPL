@@ -47,7 +47,7 @@
             this.btnOpenImage.Location = new System.Drawing.Point(112, 218);
             this.btnOpenImage.Name = "btnOpenImage";
             this.btnOpenImage.Size = new System.Drawing.Size(101, 35);
-            this.btnOpenImage.TabIndex = 9;
+            this.btnOpenImage.TabIndex = 0;
             this.btnOpenImage.Text = "Browse...";
             this.btnOpenImage.UseVisualStyleBackColor = true;
             this.btnOpenImage.Click += new System.EventHandler(this.btnOpenImage_Click);
@@ -88,7 +88,7 @@
             this.btnMedian.Location = new System.Drawing.Point(624, 218);
             this.btnMedian.Name = "btnMedian";
             this.btnMedian.Size = new System.Drawing.Size(125, 35);
-            this.btnMedian.TabIndex = 14;
+            this.btnMedian.TabIndex = 2;
             this.btnMedian.Text = "Median Filter";
             this.btnMedian.UseVisualStyleBackColor = true;
             this.btnMedian.Click += new System.EventHandler(this.btnMedian_Click);
@@ -99,7 +99,7 @@
             this.btnMean.Location = new System.Drawing.Point(318, 218);
             this.btnMean.Name = "btnMean";
             this.btnMean.Size = new System.Drawing.Size(125, 35);
-            this.btnMean.TabIndex = 13;
+            this.btnMean.TabIndex = 1;
             this.btnMean.Text = "Mean Filter";
             this.btnMean.UseVisualStyleBackColor = true;
             this.btnMean.Click += new System.EventHandler(this.btnMean_Click);
@@ -110,7 +110,7 @@
             this.btnMedianSave.Location = new System.Drawing.Point(755, 218);
             this.btnMedianSave.Name = "btnMedianSave";
             this.btnMedianSave.Size = new System.Drawing.Size(67, 35);
-            this.btnMedianSave.TabIndex = 15;
+            this.btnMedianSave.TabIndex = 4;
             this.btnMedianSave.Text = "Save";
             this.btnMedianSave.UseVisualStyleBackColor = true;
             this.btnMedianSave.Click += new System.EventHandler(this.btnMedianSave_Click);
@@ -121,7 +121,7 @@
             this.btnMeanSave.Location = new System.Drawing.Point(449, 218);
             this.btnMeanSave.Name = "btnMeanSave";
             this.btnMeanSave.Size = new System.Drawing.Size(67, 35);
-            this.btnMeanSave.TabIndex = 16;
+            this.btnMeanSave.TabIndex = 3;
             this.btnMeanSave.Text = "Save";
             this.btnMeanSave.UseVisualStyleBackColor = true;
             this.btnMeanSave.Click += new System.EventHandler(this.btnMeanSave_Click);
