@@ -40,6 +40,110 @@ namespace ImageProcessing
             }
         }
 
+        private void btnRotateRight_Click(object sender, EventArgs e)
+        {
+            if (Temp != null)
+            {
+                Modify.Dispose();
+                Modify = new Bitmap(Temp.Height, Temp.Width, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+
+                for (int i = 0; i < Temp.Width; i++)
+                {
+                    for (int j = 0; j < Temp.Height; j++)
+                    {
+                        PixelColor = Temp.GetPixel(i, j);
+                        
+                        Modify.SetPixel(Temp.Height - 1 - j, i, PixelColor);
+                    }
+                }
+
+                Temp = new Bitmap(Modify);
+                pcbModifiedImage.Image = Temp;
+
+                MessageBox.Show("Rotated");
+            }
+            else
+                MessageBox.Show("Masukkan citra yang akan diolah");
+        }
+
+        private void btnRotateLeft_Click(object sender, EventArgs e)
+        {
+            if (Temp != null)
+            {
+                Modify.Dispose();
+                Modify = new Bitmap(Temp.Height, Temp.Width, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+
+                for (int i = 0; i < Temp.Width; i++)
+                {
+                    for (int j = 0; j < Temp.Height; j++)
+                    {
+                        PixelColor = Temp.GetPixel(i, j);
+                        
+                        Modify.SetPixel(j, Temp.Width - 1 - i, PixelColor);
+                    }
+                }
+
+                Temp = new Bitmap(Modify);
+                pcbModifiedImage.Image = Temp;
+
+                MessageBox.Show("Rotated");
+            }
+            else
+                MessageBox.Show("Masukkan citra yang akan diolah");
+        }
+
+        private void btnHorizontalMirror_Click(object sender, EventArgs e)
+        {
+            if (Temp != null)
+            {
+                Modify.Dispose();
+                Modify = new Bitmap(Temp.Width, Temp.Height, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+
+                for (int i = 0; i < Temp.Width; i++)
+                {
+                    for (int j = 0; j < Temp.Height; j++)
+                    {
+                        PixelColor = Temp.GetPixel(i, j);
+
+                        Modify.SetPixel(Temp.Width - 1 - i, j, PixelColor);
+                    }
+                }
+
+                Temp = new Bitmap(Modify);
+                pcbModifiedImage.Image = Temp;
+
+                MessageBox.Show("Horizontal Mirror Completed");
+            }
+            else
+                MessageBox.Show("Masukkan citra yang akan diolah");
+        }
+
+        private void btnVerticalMirror_Click(object sender, EventArgs e)
+        {
+            if (Temp != null)
+            {
+                Modify.Dispose();
+                Modify = new Bitmap(Temp.Width, Temp.Height, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+
+                for (int i = 0; i < Temp.Width; i++)
+                {
+                    for (int j = 0; j < Temp.Height; j++)
+                    {
+                        PixelColor = Temp.GetPixel(i, j);
+
+                        Modify.SetPixel(i, Temp.Height - 1 - j, PixelColor);
+                    }
+                }
+
+                Temp = new Bitmap(Modify);
+                pcbModifiedImage.Image = Temp;
+
+                MessageBox.Show("Vertical Mirror Completed");
+            }
+            else
+                MessageBox.Show("Masukkan citra yang akan diolah");
+        }
+
         private void btnLighten_Click(object sender, EventArgs e)
         {
             if (Temp != null)

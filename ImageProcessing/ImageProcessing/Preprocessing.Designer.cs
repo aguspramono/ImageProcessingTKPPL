@@ -113,6 +113,7 @@
             this.btnRotateLeft.TabIndex = 3;
             this.btnRotateLeft.Text = "Rotate -90°";
             this.btnRotateLeft.UseVisualStyleBackColor = true;
+            this.btnRotateLeft.Click += new System.EventHandler(this.btnRotateLeft_Click);
             // 
             // btnRotateRight
             // 
@@ -123,6 +124,7 @@
             this.btnRotateRight.TabIndex = 2;
             this.btnRotateRight.Text = "Rotate 90°";
             this.btnRotateRight.UseVisualStyleBackColor = true;
+            this.btnRotateRight.Click += new System.EventHandler(this.btnRotateRight_Click);
             // 
             // btnVerticalMirror
             // 
@@ -133,6 +135,7 @@
             this.btnVerticalMirror.TabIndex = 5;
             this.btnVerticalMirror.Text = "Vertical Mirror";
             this.btnVerticalMirror.UseVisualStyleBackColor = true;
+            this.btnVerticalMirror.Click += new System.EventHandler(this.btnVerticalMirror_Click);
             // 
             // btnHorizontalMirror
             // 
@@ -143,6 +146,7 @@
             this.btnHorizontalMirror.TabIndex = 4;
             this.btnHorizontalMirror.Text = "Horizontal Mirror";
             this.btnHorizontalMirror.UseVisualStyleBackColor = true;
+            this.btnHorizontalMirror.Click += new System.EventHandler(this.btnHorizontalMirror_Click);
             // 
             // btnOriginal
             // 
