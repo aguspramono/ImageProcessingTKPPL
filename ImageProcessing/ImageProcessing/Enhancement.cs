@@ -98,6 +98,58 @@ namespace ImageProcessing
             InitializeComponent();
         }
 
+        private void btnCS_Click(object sender, EventArgs e)
+        {
+            if (Real != null)
+            {
+                int r1 = (int)nudR1.Value, s1 = (int)nudS1.Value, r2 = (int)nudR2.Value, s2 = (int)nudS2.Value;
+
+                if(r1 <= r2 && s1 <= s2)
+                {
+                    pctCS = new Bitmap(Real.Width, Real.Height, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+
+                    for (int i = 0; i < Real.Width; i++)
+                    {
+                        for (int j = 0; j < Real.Height; j++)
+                        {
+                            int r, g, b;
+
+                            PixelColor = Real.GetPixel(i, j);
+
+                            if (PixelColor.R < r1)
+                                r = PixelColor.R * (int)Math.Round((double)(s1 / r1));
+                            else if (PixelColor.R < r2)
+                                r = s1 + ((PixelColor.R - r1) * (int)Math.Round((double)((s2 - s1) / (r2 - r1))));
+                            else
+                                r = s2 + ((PixelColor.R - r2) * (int)Math.Round((double)((255 - s2) / (255 - r2))));
+
+                            if (PixelColor.G < r1)
+                                g = PixelColor.G * (int)Math.Round((double)(s1 / r1));
+                            else if (PixelColor.G < r2)
+                                g = s1 + ((PixelColor.G - r1) * (int)Math.Round((double)((s2 - s1) / (r2 - r1))));
+                            else
+                                g = s2 + ((PixelColor.G - r2) * (int)Math.Round((double)((255 - s2) / (255 - r2))));
+
+                            if (PixelColor.B < r1)
+                                b = PixelColor.B * (int)Math.Round((double)(s1 / r1));
+                            else if (PixelColor.B < r2)
+                                b = s1 + ((PixelColor.B - r1) * (int)Math.Round((double)((s2 - s1) / (r2 - r1))));
+                            else
+                                b = s2 + ((PixelColor.B - r2) * (int)Math.Round((double)((255 - s2) / (255 - r2))));
+
+                            pctCS.SetPixel(i, j, Color.FromArgb(r, g, b));
+                        }
+                    }
+
+                    pcbCSImage.Image = pctCS;
+                }
+                else
+                    MessageBox.Show("Note : r1 <= r2 & s1 <= s2");
+            }
+            else
+                MessageBox.Show("Masukkan citra yang akan diolah");
+        }
+
         private void btnCSSave_Click(object sender, EventArgs e)
         {
             if (pctCS != null)
