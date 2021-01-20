@@ -35,6 +35,7 @@ namespace ImageProcessing
                 Real = new Bitmap(pathFile);
                 Modify = new Bitmap(pathFile);
                 pcbRealImage.Image = Real;
+                pcbModifiedImage.Image = Real;
 
                 Temp = Real;
             }
@@ -142,6 +143,31 @@ namespace ImageProcessing
             }
             else
                 MessageBox.Show("Masukkan citra yang akan diolah");
+        }
+
+        private void btnModifiedSave_Click(object sender, EventArgs e)
+        {
+            if (Temp != null)
+            {
+                String pathFile = null;
+                saveImage.Filter = "Bitmap (*.bmp) | *.bmp|Portable Network Graphics (*.png) | *.png|Joint Photographic Expert Group (*.jpeg) | *.jpeg";
+                DialogResult result = saveImage.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    pathFile = saveImage.FileName;
+                    if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "bmp")
+                        Temp.Save(pathFile, System.Drawing.Imaging.ImageFormat.Bmp);
+                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "png")
+                        Temp.Save(pathFile, System.Drawing.Imaging.ImageFormat.Png);
+                    else if (pathFile.Substring(pathFile.LastIndexOf(".") + 1) == "jpeg")
+                        Temp.Save(pathFile, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                    MessageBox.Show("Gambar berhasil disimpan");
+                }
+            }
+            else
+                MessageBox.Show("Tidak ada gambar yang bisa disimpan");
         }
 
         private void btnLighten_Click(object sender, EventArgs e)

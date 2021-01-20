@@ -44,5 +44,10 @@ namespace ImageProcessing
 
             preprocessingForm.ShowDialog();
         }
+
+        private void lnkCredits_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("- Andre Pratama (171111831)\n- Agus Pramono (171110631)\n- Muhammad Imam Johari (171111971)");
+        }
     }
 }

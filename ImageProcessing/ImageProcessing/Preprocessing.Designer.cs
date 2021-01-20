@@ -86,6 +86,7 @@
             this.btnModifiedSave.TabIndex = 1;
             this.btnModifiedSave.Text = "Save";
             this.btnModifiedSave.UseVisualStyleBackColor = true;
+            this.btnModifiedSave.Click += new System.EventHandler(this.btnModifiedSave_Click);
             // 
             // grbControl
             // 

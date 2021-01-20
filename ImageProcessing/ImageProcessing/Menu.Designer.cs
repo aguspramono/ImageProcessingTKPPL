@@ -32,6 +32,7 @@
             this.btnSmoothing = new System.Windows.Forms.Button();
             this.btnEnhancement = new System.Windows.Forms.Button();
             this.btnPreprocessing = new System.Windows.Forms.Button();
+            this.lnkCredits = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btnNoise
@@ -78,12 +79,25 @@
             this.btnPreprocessing.UseVisualStyleBackColor = true;
             this.btnPreprocessing.Click += new System.EventHandler(this.btnPreprocessing_Click);
             // 
+            // lnkCredits
+            // 
+            this.lnkCredits.AutoSize = true;
+            this.lnkCredits.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lnkCredits.Location = new System.Drawing.Point(172, 91);
+            this.lnkCredits.Name = "lnkCredits";
+            this.lnkCredits.Size = new System.Drawing.Size(48, 16);
+            this.lnkCredits.TabIndex = 4;
+            this.lnkCredits.TabStop = true;
+            this.lnkCredits.Text = "Credits";
+            this.lnkCredits.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCredits_LinkClicked);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(392, 100);
+            this.ClientSize = new System.Drawing.Size(392, 116);
+            this.Controls.Add(this.lnkCredits);
             this.Controls.Add(this.btnEnhancement);
             this.Controls.Add(this.btnSmoothing);
             this.Controls.Add(this.btnPreprocessing);
@@ -95,6 +109,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ImageProcessing";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -104,6 +119,7 @@
         private System.Windows.Forms.Button btnSmoothing;
         private System.Windows.Forms.Button btnEnhancement;
         private System.Windows.Forms.Button btnPreprocessing;
+        private System.Windows.Forms.LinkLabel lnkCredits;
     }
 }
 
